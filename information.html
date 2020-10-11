@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Chapter 3 PP information</title>
+  <link rel="stylesheet" href="./css/information.css">
+  <link rel="stylesheet" href="./css/jquery.mobile-1.3.1.min.css">
+  <script src="./scripts/jquery-1.8.3.min.js.download"></script>
+  <script src="./scripts/jquery.mobile-1.3.1.min.js.download"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div data-role="page">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="file:index.html">Interface</a></li>
+        <li><a href="file:information.html" class="ui-btn-active ui-state-persist">Information</a></li>
+      </ul>
+    </div>
+
+    <h1>Amortization Calculations</h1>
+
+    <div data-role="content">
+
+    <p>Amortization is when you pay off debt over a set amount of time
+    in equal installments. Each month you will have a payment that
+    will consist of the principal and the interest. The principal
+    is the part that lowers the balance while the interest is the 
+    part that goes to the bank as interest on the loan. With an
+    amortization, the principal starts out small and gradually gets 
+    bigger, vice versa, the interest starts big and gradually gets
+    smaller. This is because at first, the balance is high, therefore
+    more interest. As the balance gets lower, there is less interest
+    and more principal. This website demonstrates how to calculate 
+    the monthly interest, principal and total cost of the loan. 
+    </p>
+
+    <h4>Important Terms</h4>
+
+    <ul>
+      <li>Loan Amount: Total amount of money you are borrowing.</li>
+      <li>Loan Term: The time it will take to pay off the loan.</li>
+      <li>Interest Rate: The yearly rate also known as APR(Annual Percentage Rate).</li>
+      <li>Monthly Payment: Minimum payment set by lender.</li>
+      <li>Principal Amount: Amount going towards the loan.</li>
+      <li>Interest Amount: Amount going towards interest.</li>
+      <li>Balance: Amount left on loan after principal is paid.</li>
+    </ul>
+
+    <h3>Loan Example</h3>
+  
+    <table class="table1" border="5">
+      <tbody>
+        <tr>
+          <td>Loan Amount:</td>
+          <td>$10,000</td>
+        </tr>
+        <tr>
+          <td>Loan Term:</td>
+          <td>12 Months</td>
+        </tr>
+        <tr>
+          <td>Interest:</td>
+          <td>4.50%</td>
+        </tr>
+        <tr>
+          <td>Monthly Payment:</td>
+          <td>$853.79</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Steps to calculate monthly interest and principal</h4>
+
+    <ol>
+      <li>First, we convert the percentage rate into a decimal and divide by 12 months.</li>
+        <ul>
+          <li> (4.50/100) / (12) = <mark>0.00375</mark></li>
+        </ul>
+      <li>Then, we multiply that result with the loan amount.</li>
+        <ul>
+          <li> 0.00375 * $10,000 = <mark>$37.50</mark></li>
+        </ul>
+      <li>We now know the monthly interest. To get the principal, we subtract the interest from it.</li>
+        <ul>
+          <li> $853.79 - $37.50 = <mark>$816.29</mark></li>
+        </ul>
+      <li>Now we can subtract the principal from the loan amount and get our new loan balance.</li>
+        <ul>
+          <li> $10,000 - $816.29 = <mark>$9,183.71</mark></li>
+        </ul>
+      <li>We repeat the process from step 2 with the new loan balance and continue to do this until<br>
+          we have done the entire term. Then we can add up the interest from every month to get<br>
+          the total interest paid. This will give us the cost of the loan.</li>
+    </ol>
+
+    <h3>12 Month Amortization Schedule</h3>
+
+    <table class="table2" border="3">
+      <tbody>
+        <tr>
+          <th>Month</th>
+          <th>Monthly Payment</th>
+          <th>Principal</th>
+          <th>Interest</th>
+          <th>Total Interest</th>
+          <th>Balance</th>
+        </tr>
+        <tr>
+          <td><em>1</em></td>
+          <td>$853.79</td>
+          <td>$816.29</td>
+          <td>$37.50</td>
+          <td>$37.50</td>
+          <td>$9,183.71</td>
+        </tr>
+        <tr>
+          <td><em>2</em></td>
+          <td>$853.79</td>
+          <td>$819.35</td>
+          <td>$34.44</td>
+          <td>$71.94</td>
+          <td>$8,364.37</td>
+        </tr>
+        <tr>
+          <td><em>3</em></td>
+          <td>$853.79</td>
+          <td>$822.42</td>
+          <td>$31.37</td>
+          <td>$103.31</td>
+          <td>$7,541.95</td>
+        </tr>
+        <tr>
+          <td><em>4</em></td>
+          <td>$853.79</td>
+          <td>$825.50</td>
+          <td>$28.28</td>
+          <td>$131.59</td>
+          <td>$6,716.45</td>
+        </tr>
+        <tr>
+          <td><em>5</em></td>
+          <td>$853.79</td>
+          <td>$828.60</td>
+          <td>$25.19</td>
+          <td>$156.77</td>
+          <td>$5,887.85</td>
+        </tr>
+        <tr>
+          <td><em>6</em></td>
+          <td>$853.79</td>
+          <td>$831.71</td>
+          <td>$22.08</td>
+          <td>$178.85</td>
+          <td>$5,056.14</td>
+        </tr>
+        <tr>
+          <td><em>7</em></td>
+          <td>$853.79</td>
+          <td>$834.82</td>
+          <td>$18.96</td>
+          <td>$197.81</td>
+          <td>$4,221.32</td>
+        </tr>
+        <tr>
+          <td><em>8</em></td>
+          <td>$853.79</td>
+          <td>$837.96</td>
+          <td>$15.83</td>
+          <td>$213.64</td>
+          <td>$3,383.36</td>
+        </tr>
+        <tr>
+          <td><em>9</em></td>
+          <td>$853.79</td>
+          <td>$841.10</td>
+          <td>$12.69</td>
+          <td>$226.33</td>
+          <td>$2,542.26</td>
+        </tr>
+        <tr>
+          <td><em>10</em></td>
+          <td>$853.79</td>
+          <td>$844.25</td>
+          <td>$9.53</td>
+          <td>$235.87</td>
+          <td>$1,698.01</td>
+        </tr>
+        <tr>
+          <td><em>11</em></td>
+          <td>$853.79</td>
+          <td>$847.42</td>
+          <td>$6.37</td>
+          <td>$242.23</td>
+          <td>$850.60</td>
+        </tr>
+        <tr>
+          <td><em>12</em></td>
+          <td>$853.79</td>
+          <td>$850.60</td>
+          <td>$3.19</td>
+          <td>$245.42</td>
+          <td>$0.00</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</body></html>
