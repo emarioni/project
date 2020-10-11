@@ -1,2 +1,2 @@
 # project
-chapter 3
+Amortization Calculator Poject for CSCI 430 - Mobile Computing.
